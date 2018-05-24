@@ -1,0 +1,19 @@
+<?php
+/** @var core\View $this */
+$this->findLink();
+
+
+?>
+
+
+
+
+<div class="row">
+   <?php
+   for ($i=0;$i<=2;$i++){
+       $this->findLink();
+       require (__DIR__.'\columm.phtml');
+   }
+   ?>
+<h1>   </h1>
+<hr>

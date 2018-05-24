@@ -1,0 +1,21 @@
+<?php
+use model\Info;
+
+
+$info = new Info();
+
+
+
+if (is_array($info->getContactInfo("$path")))
+    extract($info->getContactInfo($path));
+
+
+if( (is_array( $info ->getEducationInfo("$path"))))
+extract($info->getEducationInfo($path));
+
+
+if (is_array( $info ->getExperienceInfo("$path")))
+extract($info->getExperienceInfo($path));
+
+if (is_array( $info ->    getPersonalInfo("$path")))
+extract($info->getPersonalInfo($path));

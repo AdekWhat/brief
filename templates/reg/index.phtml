@@ -1,0 +1,19 @@
+<?php
+/** @var controllers\RegistrationController $this */
+?>
+<form action="registration" class="center-block" method="post" >
+    <fieldset class="form-control-static center-block">
+        <fieldset class="center-block">
+            <label for="name">Никнейм</label><p class="input"><input name="regName" id="name"  ><span class="ok">&#10003;</span><span class="nook">&#10005;</span></p>
+            <label for="password">Пароль</label><p class="input"><input type="password" name="regPassword" id="password" maxlength="6"  ></p> <!-- pattern="[^А-Яа-я]+$"  - маска ввода пароля -->
+            <label for="re-password">Повторите пароль</label><p class="input"><input type="password" name="regRePassword" id="re-password" ><span class="ok">&#10003;</span><span class="nook">&#10005;</span></p> <!-- pattern="[^А-Яа-я]+$"  - маска ввода пароля -->
+
+        </fieldset>
+    </fieldset>
+        <button  type="submit" class="btn btn-success"  >Registration</button>
+    </form>
+</form>
+
+<!--nickname  pattern="^[А-Яа-я]+$"-->
+<!-- email pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"-->
+

@@ -1,0 +1,56 @@
+<form>
+<div class="right">
+<form action="http://brief/admin/download"  enctype="multipart/form-data" class="form-control-static" method="post">
+<!--    <p>Загрузите ваш аватар</p>-->
+    <p><input  type="file" name="photo"   accept="image/*,image/jpeg">
+        <input formaction="http://brief/admin/download" formmethod="post" type="submit" class="btn btn-success" value="Отправить"></p>
+</form>
+</div>
+<div>
+    <form action="http://brief/admin/submit" method="post" ><h1>Personal</h1>
+        <div>
+            <input type="text" placeholder="Name" name="name" class="form-control-static">
+
+
+            <input type="text" placeholder="Second Name" name="secondName" class="form-control-static">
+
+            <input type="text" placeholder="City" name="city" class="form-control-static" >
+        </div>
+
+
+</div>
+<div>
+    <h1>Education</h1>
+        <div>
+            <input type="text" placeholder="Place of studing" name="place" class="form-control-static" >
+            <input type="text" placeholder="Period" name="period" class="form-control-static" >
+            <input type="text" placeholder="Speciality" name="speciality" class="form-control-static" >
+        </div>
+
+</div>
+    <div>
+        <h1>Experience</h1>
+            <input type="text" placeholder="Company" name="company" class="form-control-static" >
+            <input type="text" placeholder="Period" name="period" class="form-control-static" >
+            <input type="text" placeholder="Position" name="position" class="form-control-static" >
+    </div>
+
+<div>
+    <h1>Contacts</h1>
+    <input type="text" placeholder="Email" name="email" class="form-control-static" >
+    <input type="text" placeholder="Linkedin" name="linkedIn" class="form-control-static" >
+    <input type="text" placeholder="Github" name="github" class="form-control-static" >
+    <input type="text" placeholder="Phone" name="phone" class="form-control-static" >
+    <h1> </h1>
+
+    <input formaction="http://brief/admin/submit" type="submit" class="btn btn-success" value="Submit">
+
+</div>
+<!--    <div>-->
+<!--        <h1>Skills</h1>-->
+<!--        <input type="text" placeholder="Company" name="company" class="form-control-static" >-->
+<!--    </div>-->
+
+
+</form>
+</div>

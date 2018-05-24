@@ -1,0 +1,22 @@
+<div id="navbar" class="navbar-collapse collapse">
+    <form action="http://brief/admin/exit" method="post" class="navbar-form navbar-right">
+        <button  type="submit" class="btn btn-success">Exit</button>
+    </form>
+
+
+
+
+    <?php $action =  $_SERVER['REQUEST_URI'];
+           $action = explode ("/", $action);
+
+           if ($action[1] == 'admin'){
+               require_once (__DIR__.'/user.phtml');
+
+
+           }else{
+               require_once (__DIR__.'/admin.phtml');
+
+           }
+
+    ; ?>
+
