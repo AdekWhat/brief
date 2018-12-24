@@ -25,24 +25,24 @@ class Path
     }
 
 
-    public static function createPath($dir)
-    {
-        $dir = __DIR__ . "/../templates/user/$dir";
-        mkdir($dir);
-        $write = '<?php
-        $path = (__FILE__) ;
-        $path =  explode("\\\",$path);
-        $path = $path[7];
-        require_once __DIR__."/../../../GetDataBase.phtml";
-        require_once __DIR__."/../../../content.phtml" ;
+//    public static function createPath($dir)
+//    {
+//        $dir = __DIR__ . "/../templates/user/$dir";
+//        mkdir($dir);
+//        $write = '<?php
+//        $path = (__FILE__) ;
+//        $path =  explode("\\\",$path);
+//        $path = $path[7];
+//        require_once __DIR__."/../../../GetDataBase.phtml";
+//        require_once __DIR__."/../../../content.phtml" ;
+//
+/*        ?>';*/
+//        $dir = $dir . DIRECTORY_SEPARATOR . "index.phtml";
+//
+//        $dir =  fopen("$dir", "x");
+//        fwrite($dir,$write);
+//        fclose($dir);
 
-        ?>';
-        $dir = $dir . DIRECTORY_SEPARATOR . "index.phtml";
 
-        $dir =  fopen("$dir", "x");
-        fwrite($dir,$write);
-        fclose($dir);
-
-
-    }
+//    }
 }

@@ -12,7 +12,7 @@ use core\Connection;
 
 class Info extends Connection
 {
-    public  function addPersonalInfo($nick, $name, $secondName, $city)
+    public function addPersonalInfo($nick, $name, $secondName, $city)
     {
 
 
@@ -33,15 +33,17 @@ class Info extends Connection
     }
 
 
-    public  function addEducationInfo($nick,$place,$period,$speciality)
+    public function addEducationInfo($nick, $place, $period, $speciality)
     {
-        if ($nick == null || $place == null || $period == null || $speciality == null){
+
+
+        if ($nick == null || $place == null || $period == null || $speciality == null) {
             return false;
-        }else{
+        } else {
             $this->someMethod(
                 "INSERT INTO education 
                 (nickname, place, period, speciality)
-              VALUES ('$nick', '$place', '$period', '$speciality')");
+              VALUES ('$nick', '$place', '$period', '$speciality')")   ;
 
             return true;
         }
@@ -50,38 +52,43 @@ class Info extends Connection
     }
 
 
-    public  function addExperienceInfo($nick,$company,$period,$position)
+    public function addExperienceInfo($nick, $company, $wperiod, $position)
     {
-        if ($nick == null || $company == null || $period == null || $position == null){
+
+        if ($nick == null || $company == null || $wperiod == null || $position == null) {
             return false;
-        }else{
+        } else {
+
+
+
             $this->someMethod
             ("INSERT INTO experience
-                (nickname, company, period, position)
-                VALUES ('$nick','$company','$period','$position') ");
+                (nickname, company, wperiod, position)
+                VALUES ('$nick','$company','$wperiod','$position') ");
             return true;
         }
 
     }
 
-    public  function addContactInfo($nick,$email,$linkedIn,$github,$phone)
-{
-    if ($nick == null || $email == null || $linkedIn == null || $github == null || $phone == null){
-        return false;
-    }else{
-        $this->someMethod
-        ("INSERT INTO contacts (nickname, email, linkedin, github, phone)
+    public function addContactInfo($nick, $email, $linkedIn, $github, $phone)
+    {
+
+        if ($nick == null || $email == null || $linkedIn == null || $github == null || $phone == null) {
+            return false;
+        } else {
+            $this->someMethod
+            ("INSERT INTO contacts (nickname, email, linkedin, github, phone)
          VALUES ('$nick','$email','$linkedIn','$github','$phone')");
-        return true;
+            return true;
+        }
+
     }
 
-}
 
-
-    public function getPersonalInfo($ident)
+    public function getPersonalInfo()
     {
-      $temp = $this->someMethod("SELECT * FROM personal WHERE nickname = '$ident' ");
-        return $temp->fetch_assoc();
+        $temp = $this->someMethod("SELECT * FROM users");
+        return $temp->fetch_all();
 
     }
 
@@ -90,8 +97,7 @@ class Info extends Connection
         $temp = $this->someMethod("SELECT * FROM education WHERE nickname = '$ident' ");
 
 
-            return $temp->fetch_assoc();
-
+        return $temp->fetch_assoc();
 
 
     }
@@ -99,7 +105,7 @@ class Info extends Connection
     public function getExperienceInfo($ident)
     {
         $temp = $this->someMethod("SELECT * FROM experience WHERE nickname = '$ident' ");
-         return $temp->fetch_assoc();
+        return $temp->fetch_assoc();
 
     }
 
@@ -107,16 +113,72 @@ class Info extends Connection
     {
         $temp = $this->someMethod("SELECT * FROM contacts WHERE nickname = '$ident' ");
 
-      return $temp->fetch_assoc();
-
+        return $temp->fetch_assoc();
 
 
     }
 
     public function getRandom()
     {
-     $temp = $this->someMethod(  "SELECT username FROM users ORDER BY RAND()");
-     return $temp->fetch_assoc();
+        $temp = $this->someMethod("SELECT username FROM users ORDER BY RAND()");
+        return $temp->fetch_assoc();
+    }
+
+
+    public function updateEducationInfo($nick, $place, $period, $speciality)
+    {
+
+            $this->someMethod(
+                "UPDATE education SET
+                 place = '$place' , period = '$period', speciality = '$speciality' )
+                  WHERE nickname = '$nick'");
+
+            return true;
+
+
+
+    }
+
+    public function updateExperienceInfo($nick, $company, $period, $position)
+    {
+
+        $this->someMethod(
+            "UPDATE experience SET
+                 company = '$company' , period = '$period', position = '$position' )
+                  WHERE nickname = '$nick'");
+
+        return true;
+
+
+
+    }
+
+    public function updateContactsInfo($nick, $email, $linkedIn, $github, $phone)
+    {
+
+        $this->someMethod(
+            "UPDATE contacts SET
+                 email = '$email' , linkedin = '$linkedIn', github = '$github', phone = '$phone' )
+                  WHERE nickname = '$nick'");
+
+        return true;
+
+
+
+    }
+
+    public function updatePersonalInfo($nick, $name, $secondName, $city)
+    {
+
+        $this->someMethod(
+            "UPDATE contacts SET
+                 NAME = '$name' , secondName = '$secondName', city = '$city' )
+                  WHERE nickname = '$nick'");
+
+        return true;
+
+
+
     }
 
 

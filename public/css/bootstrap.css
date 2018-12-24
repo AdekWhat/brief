@@ -11,7 +11,8 @@ html {
 }
 .square1 {
 
-  font-family: BeerRegular ;
+  font-family: BeerRegular, serif ;
+  position: center;
 
 
 }

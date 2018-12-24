@@ -20,21 +20,16 @@ class UserController extends controller
 
     public function actionIndex()
     {
-
+        if (true){
         $this->title = 'userController';
-        if ($GLOBALS['action'] == null || $GLOBALS['action'] == "index" ) {
-            $this->view->render("user/index");
-        }else{
-
-            if (file_exists("../templates/user/" . $GLOBALS['action'] . "/index.phtml")) {
-                $this->view->render("user/" . $GLOBALS['action'] . "/index" );
+        $this->view->render("user/index");
 
             }else{
                 $this->action404();
             }
         }
 
-    }
+
 
 
 

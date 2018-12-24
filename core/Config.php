@@ -24,11 +24,11 @@ class Config
         return self::$instance;
     }
 
-    public function set(string $key, $value): array
-    {
-        $this->data[$key] = $value;
-        return $this->data;
-    }
+//    public function set(string $key, $value): array
+//    {
+//        $this->data[$key] = $value;
+//        return $this->data;
+//    }
 
     public function init(array $data)
     {

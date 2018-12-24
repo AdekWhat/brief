@@ -26,8 +26,13 @@ class AdminController extends controller
             $view = new View();
             $controller = new userController($view);
 
+            $info = new info();
+           $some = $info->getPersonalInfo();
+//            print_r($some);
+
             $view->setController($controller);
-            $this->view->render("admin/index");
+         $this->view->render("admin/index",$some);
+
         } else {
 
             header('Location: http://brief/home');
@@ -59,12 +64,8 @@ class AdminController extends controller
     public function actionSubmit()
     {
         if ($_SESSION['userid'] != null) {
-            $info = new Info();
-            Filter::filter($_POST);
-            $info->addContactInfo($_SESSION['username'], $_POST['email'], $_POST['linkedIn'], $_POST['github'], $_POST['phone']);
-            $info->addPersonalInfo($_SESSION['username'], $_POST['name'], $_POST['secondName'], $_POST['city']);
-            $info->addEducationInfo($_SESSION['username'], $_POST['place'], $_POST['period'], $_POST['speciality']);
-            $info->addExperienceInfo($_SESSION['username'], $_POST['company'], $_POST['period'], $_POST['position']);
+
+
             $this->actionIndex();
         } else {
             $this->initNotFoundController();
@@ -93,28 +94,28 @@ class AdminController extends controller
         return $this->user;
     }
 
-    public function actionDownload()
-    {
+//    public function actionDownload()
+//    {
+//
+//        if ($_SESSION['userid'] != null) {
+//            $this->title = 'Admin';
+//            $this->view->render('admin/index');
+////            $uploaddir = "../templates/user/{$_SESSION['username']}";
+//
+//            if((move_uploaded_file($_FILES['userfile']['tmp_name'], $uploaddir .
+//                $_FILES['userfile']['name']))) {
+////                header('Location: http://brief/admin');
+//                return true;
+//            } else {
+//                return false;
+//            }
+//        }else{
+//            $this->initNotFoundController();
+//        }
 
-        if ($_SESSION['userid'] != null) {
-            $this->title = 'Admin';
-            $this->view->render('admin/index');
-            $uploaddir = "../templates/user/{$_SESSION['username']}";
-
-            if((move_uploaded_file($_FILES['userfile']['tmp_name'], $uploaddir .
-                $_FILES['userfile']['name']))) {
-//                header('Location: http://brief/admin');
-                return true;
-            } else {
-                return false;
-            }
-        }else{
-            $this->initNotFoundController();
-        }
 
 
-
-    }
+//    }
 
     private function initNotFoundController()
     {

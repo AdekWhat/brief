@@ -44,7 +44,6 @@ class View
             ob_start();
             include($this->findTemplate($template));
             $this->content = ob_get_clean();
-
             include($this->findTemplate(Config::getInstance()->get('layout')));
         } catch (\Exception $ex)
         {}

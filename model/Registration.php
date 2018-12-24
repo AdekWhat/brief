@@ -7,29 +7,39 @@
  */
 
 namespace model;
+
 use core\Connection;
 
 class Registration
 {
 
-    public function register($nickname,$password)
+    public static function register($nickname, $password)
     {
 
         $db = new Connection();
-        $qr = $db->someMethod("SELECT * FROM users WHERE username='$nickname'" );
-        $qr = $qr->fetch_assoc();
 
-
-        if ($qr["username"] === null || $qr ["username"] == ''){
+        print_r($nickname);
             $password = md5($password);
 
-            return $db->someMethod("INSERT INTO users ( username, password ) VALUES ('$nickname','$password')");
 
-        }else{
 
-            print_r("This nickname has been already taken");
-        }
+            return $db->someMethod("INSERT INTO users ( username, password)
+ VALUES ('$nickname','$password')");
+
+
 
     }
+
+    public static function checkUser($nickname)
+    {
+        $db = new Connection();
+        $query = $db->someMethod("SELECT * FROM users WHERE username='$nickname'");
+        $query = $query->fetch_assoc();
+        if ($query["username"] === null || $query ["username"] == '') {
+            return true;
+        }
+        return false;
+    }
+
 
 }

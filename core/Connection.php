@@ -14,12 +14,9 @@ class Connection
     {
 
         if ($this->connection === null) {
-            $this->connection = new \mysqli("127.0.0.1", 'root', '', 'cv');
+            $this->connection = new \mysqli("127.0.0.1", 'root', '', 'edtions');
             if (!$this->connection) {
-                echo "Ошибка: Невозможно установить соединение с MySQL." . PHP_EOL;
-                echo "Код ошибки errno: " . mysqli_connect_errno() . PHP_EOL;
-                echo "Текст ошибки error: " . mysqli_connect_error() . PHP_EOL;
-                exit;
+           return false;
             }
 
         }
@@ -31,7 +28,8 @@ class Connection
 
     public function someMethod($query)
     {
-      return $this->connection->query($query);
+
+   return $this->connection->query($query);
 
     }
 
