@@ -29,10 +29,10 @@ class RegistrationController extends controller
 
             Registration::register($_POST["regName"], $_POST["regPassword"]);
             autorization::validate($_POST["regName"],$_POST["regPassword"]);
-//            $this->actionSecondStep();
+
 
 //
-//           header('Location: http://brief/registration/secondstep');
+           header('Location: http://brief/admin');
 
 
         } else {
@@ -47,14 +47,14 @@ class RegistrationController extends controller
 
 
         if ($_POST["regName"] == null || $_POST["regPassword"] == null) {
-
             return false;
 
-        } elseif (Registration::checkUser($_POST["regName"]))
+        } elseif (Registration::checkUser($_POST["regName"])) {
 
             return true;
-
+        }
     }
+
 
 
     public function actionSecondStep()
@@ -64,11 +64,8 @@ class RegistrationController extends controller
         $this->view->render('secondstepregistration/index');
         if ($this->checkSecondReg())
         {
-           var_dump( $remeber = $this->memento);
-          var_dump(  $name = $remeber[0]);
-          var_dump(  $password = $remeber[1]);
 
-//            var_dump($executer);
+//
 
 
         }else{

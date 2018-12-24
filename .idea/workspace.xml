@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b32d632-0438-4200-a5a9-66862cf432c4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
-      <change beforePath="$PROJECT_DIR$/content.phtml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/controllers/AdminController.php" afterPath="$PROJECT_DIR$/controllers/AdminController.php" />
-      <change beforePath="$PROJECT_DIR$/controllers/NotFoundController.php" afterPath="$PROJECT_DIR$/controllers/NotFoundController.php" />
       <change beforePath="$PROJECT_DIR$/controllers/RegistrationController.php" afterPath="$PROJECT_DIR$/controllers/RegistrationController.php" />
-      <change beforePath="$PROJECT_DIR$/controllers/UserController.php" afterPath="$PROJECT_DIR$/controllers/UserController.php" />
-      <change beforePath="$PROJECT_DIR$/core/Config.php" afterPath="$PROJECT_DIR$/core/Config.php" />
-      <change beforePath="$PROJECT_DIR$/core/Connection.php" afterPath="$PROJECT_DIR$/core/Connection.php" />
-      <change beforePath="$PROJECT_DIR$/core/Path.php" afterPath="$PROJECT_DIR$/core/Path.php" />
-      <change beforePath="$PROJECT_DIR$/core/View.php" afterPath="$PROJECT_DIR$/core/View.php" />
-      <change beforePath="$PROJECT_DIR$/enviroment.php" afterPath="$PROJECT_DIR$/enviroment.php" />
-      <change beforePath="$PROJECT_DIR$/model/Info.php" afterPath="$PROJECT_DIR$/model/Info.php" />
       <change beforePath="$PROJECT_DIR$/model/Registration.php" afterPath="$PROJECT_DIR$/model/Registration.php" />
-      <change beforePath="$PROJECT_DIR$/public/css/bootstrap.css" afterPath="$PROJECT_DIR$/public/css/bootstrap.css" />
-      <change beforePath="$PROJECT_DIR$/templates/404/404.phtml" afterPath="$PROJECT_DIR$/templates/404/404.phtml" />
-      <change beforePath="$PROJECT_DIR$/templates/action404/index.phtml" afterPath="$PROJECT_DIR$/templates/action404/index.phtml" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/index.phtml" afterPath="$PROJECT_DIR$/templates/admin/index.phtml" />
-      <change beforePath="$PROJECT_DIR$/templates/auth/auth.phtml" afterPath="$PROJECT_DIR$/templates/auth/auth.phtml" />
-      <change beforePath="$PROJECT_DIR$/templates/home/columm.phtml" afterPath="$PROJECT_DIR$/templates/home/columm.phtml" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.phtml" afterPath="$PROJECT_DIR$/templates/home/index.phtml" />
-      <change beforePath="$PROJECT_DIR$/templates/reg/index.phtml" afterPath="$PROJECT_DIR$/templates/reg/index.phtml" />
-      <change beforePath="$PROJECT_DIR$/templates/user/index.phtml" afterPath="$PROJECT_DIR$/templates/user/index.phtml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,8 +17,8 @@
       <file leaf-file-name="RegistrationController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/RegistrationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="48" column="73" lean-forward="false" selection-start-line="48" selection-start-column="73" selection-end-line="48" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -80,13 +59,13 @@
       <file leaf-file-name="Registration.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Registration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+            <state relative-caret-position="0">
+              <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding>
-                <marker date="1545691315098" expanded="true" signature="359:420" ph="INSERT INTO users... " />
-                <marker date="1545691315098" expanded="true" signature="359:431" ph="INSERT INTO users... " />
-                <marker date="1545691315098" expanded="true" signature="359:432" ph="INSERT INTO users... " />
-                <marker date="1545691315098" expanded="true" signature="566:612" ph="SELECT * FRO... users" />
+                <marker date="1545693015985" expanded="true" signature="328:388" ph="INSERT INTO users... " />
+                <marker date="1545693015985" expanded="true" signature="328:399" ph="INSERT INTO users... " />
+                <marker date="1545693015985" expanded="true" signature="328:400" ph="INSERT INTO users... " />
+                <marker date="1545693015985" expanded="true" signature="534:580" ph="SELECT * FRO... users" />
               </folding>
             </state>
           </provider>
@@ -159,12 +138,12 @@
         <option value="$PROJECT_DIR$/templates/admin/index.phtml" />
         <option value="$PROJECT_DIR$/templates/admin/index.phtml" />
         <option value="$PROJECT_DIR$/core/View.php" />
+        <option value="$PROJECT_DIR$/model/autorization.php" />
+        <option value="$PROJECT_DIR$/model/autorization.php" />
         <option value="$PROJECT_DIR$/model/Registration.php" />
         <option value="$PROJECT_DIR$/model/Registration.php" />
         <option value="$PROJECT_DIR$/controllers/RegistrationController.php" />
         <option value="$PROJECT_DIR$/controllers/RegistrationController.php" />
-        <option value="$PROJECT_DIR$/model/autorization.php" />
-        <option value="$PROJECT_DIR$/model/autorization.php" />
       </list>
     </option>
   </component>
@@ -375,12 +354,12 @@
       <workItem from="1545145644754" duration="4358000" />
       <workItem from="1545344812142" duration="12425000" />
       <workItem from="1545603418813" duration="10443000" />
-      <workItem from="1545678202128" duration="10404000" />
+      <workItem from="1545678202128" duration="12118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201326000" />
+    <option name="totallyTimeSpent" value="203040000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="100" y="-8" width="1274" height="784" extended-state="6" />
@@ -744,19 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Registration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding>
-            <marker date="1545691315098" expanded="true" signature="359:420" ph="INSERT INTO users... " />
-            <marker date="1545691315098" expanded="true" signature="359:431" ph="INSERT INTO users... " />
-            <marker date="1545691315098" expanded="true" signature="359:432" ph="INSERT INTO users... " />
-            <marker date="1545691315098" expanded="true" signature="566:612" ph="SELECT * FRO... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/autorization.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -767,10 +733,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/Registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <marker date="1545693015985" expanded="true" signature="328:388" ph="INSERT INTO users... " />
+            <marker date="1545693015985" expanded="true" signature="328:399" ph="INSERT INTO users... " />
+            <marker date="1545693015985" expanded="true" signature="328:400" ph="INSERT INTO users... " />
+            <marker date="1545693015985" expanded="true" signature="534:580" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/RegistrationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="34">
+          <caret line="48" column="73" lean-forward="false" selection-start-line="48" selection-start-column="73" selection-end-line="48" selection-end-column="73" />
           <folding />
         </state>
       </provider>

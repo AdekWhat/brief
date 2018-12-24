@@ -18,13 +18,12 @@ class Registration
 
         $db = new Connection();
 
-        print_r($nickname);
+
             $password = md5($password);
 
 
 
-            return $db->someMethod("INSERT INTO users ( username, password)
- VALUES ('$nickname','$password')");
+        return $db->someMethod("INSERT INTO users ( username, password) VALUES ('$nickname','$password')");
 
 
 
