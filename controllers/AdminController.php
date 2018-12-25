@@ -25,13 +25,12 @@ class AdminController extends controller
             $this->title = $this->user;
             $view = new View();
             $controller = new userController($view);
-            var_dump("true");
             $info = new info();
-           $some = $info->getPersonalInfo();
+//           $some = $info->getPersonalInfo();
 //            print_r($some);
 
             $view->setController($controller);
-         $this->view->render("admin/index",$some);
+         $this->view->render("admin/index");
 
         } else {
 
@@ -123,6 +122,31 @@ class AdminController extends controller
         $controller = new NotFoundController($view);
         $view->setController($controller);
         $view->render("404/404");
+    }
+
+    public function actionUpdateInfo()
+    {
+
+        $userName = $_SESSION["username"];
+        $executer = $this->checkExecuter();
+
+        $updateInfo  = new info();
+        $updateInfo->updateUsersInfo ($_POST["secondName"], $_POST["email"], $_POST["salary"],$executer,
+           $_POST["phoneNumber"], $userName);
+
+        header('Location: http://brief/admin');
+
+    }
+
+    public function checkExecuter()
+    {
+        if ($_POST["executer"] == 'on')
+        {
+            return "1";
+        }elseif($_POST["executer"] == null){
+            return "0";
+        }
+
     }
 
 }

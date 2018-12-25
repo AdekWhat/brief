@@ -102,16 +102,7 @@ class RegistrationController extends controller
 
     }
 
-    public function checkExecuter()
-    {
-        if ($_POST["executer"] == 'on')
-        {
-            return "1";
-        }elseif($_POST["executer"] == null){
-            return "0";
-        }
 
-    }
 
 //    public function memento ()
 //    {
