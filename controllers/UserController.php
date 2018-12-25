@@ -11,6 +11,7 @@ use core\controller;
 use core\Router;
 use core\view;
 use model\Info;
+use model\autorization;
 
 class UserController extends controller
 {
@@ -20,7 +21,8 @@ class UserController extends controller
 
     public function actionIndex()
     {
-        if (true){
+        if ( $_SESSION["username"]) {
+
         $this->title = 'userController';
         $this->view->render("user/index");
 
@@ -39,7 +41,6 @@ class UserController extends controller
     {
 
         $info = new Info();
-        var_dump($info->getRandom());
         $this->title = 'Non found controller';
         $this->view->render("action404/index");
     }

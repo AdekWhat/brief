@@ -15,7 +15,7 @@ class autorization
         $sr = $db->someMethod("SELECT * FROM users WHERE username='$nickname'AND password='$password'" );
         $sr = $sr->fetch_assoc();
         if ($sr){
-            $_SESSION["username"] = $nickname;
+                $_SESSION["username"] = $nickname;
             $_SESSION['userid'] = $sr['password'];
 
             return true;

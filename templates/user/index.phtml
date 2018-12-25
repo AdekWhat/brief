@@ -1,13 +1,23 @@
 <form action="http://brief/registration/secondstep" class="center-block" method="post" >
     <fieldset class="form-control-static center-block">
         <fieldset class="center-block">
-            <label for="name">Second Name</label><p class="input"><input name="secondName"  ></p>
-            <label for="password">Email</label><p class="input"><input type="email" name="email"   ></p> <!-- pattern="[^А-Яа-я]+$"  - маска ввода пароля -->
-            <label for="re-password">Phone Number</label><p class="input"><input type="tel" name="phoneNumber" id="re-password" ></p> <!-- pattern="[^А-Яа-я]+$"  - маска ввода пароля -->
-            <label for="name">Your salary</label><p class="input"><input name="salary"  ></p>
-            <label for="name">Are you perfomer?</label><p class="input"><input type="checkbox" name="executer"  ></p>
-
+            <label for="name">Name publication</label><p class="input"><input name="name_publication"  ></p>
+            <label for="password">Short name</label><p class="input"><input name="short_name"></p> <!-- pattern="[^А-Яа-я]+$"  - маска ввода пароля -->
+            //книжки, журнали, брошури, газети, буклети,  листівки
+            <label for="type_of_publication"></label><p style="text-align: center"><button>Type publication</button >
+              <ul id='menu'>
+                <li>Книга</li>
+                <li>Газета</li>
+                <li>Брошура</li>
+                <li>Буклет</li>
+                <li>Листівка</li>
+                <li>Інше</li>
+              </ul>
+            </p>
+            <label for="re-password">Size page</label><p class="input"><input name="size_page"></p> <!-- pattern="[^А-Яа-я]+$"  - маска ввода пароля -->
+            <label for="name">Circulation</label><p class="input"><input name="circulation"  ></p>
+            <label for="name">Way of printing</label><p class="input"><input name="way_of_printing"  ></p>
         </fieldset>
     </fieldset>
-    <button  type="submit" class="btn btn-success"  >Registration</button>
+    <button  type="submit" class="btn btn-success">Card publication</button>
 </form>
