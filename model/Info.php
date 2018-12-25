@@ -85,19 +85,19 @@ class Info extends Connection
     }
 
 
-    public function getPersonalInfo()
+    public function getUsersInfo()
     {
         $temp = $this->someMethod("SELECT * FROM users");
         return $temp->fetch_all();
 
     }
 
-    public function getEducationInfo($ident)
+    public function getAllPublicationInfo($ident)
     {
-        $temp = $this->someMethod("SELECT * FROM education WHERE nickname = '$ident' ");
+        $temp = $this->someMethod("SELECT name_publication,short_name,size_page FROM card_of_publication");
 
 
-        return $temp->fetch_assoc();
+        return $temp->fetch_all();
 
 
     }

@@ -25,7 +25,7 @@ class AdminController extends controller
             $this->title = $this->user;
             $view = new View();
             $controller = new userController($view);
-
+            var_dump("true");
             $info = new info();
            $some = $info->getPersonalInfo();
 //            print_r($some);

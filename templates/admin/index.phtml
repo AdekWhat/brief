@@ -1,21 +1,14 @@
-<?php
-//for ($i=0;$i<2;$i++){
-////    print_r($variables[$i]);
-//    for($j=0;$j<6;$j++)
-//    {
-////    print_r($variables[$i][$j]);
-//        echo "  ";
-//
-//    }
-//    echo "</br>";
 
-//}
+<form action="http://brief/registration/secondstep" class="center-block" method="post" >
+    <fieldset class="form-control-static center-block">
+        <fieldset class="center-block">
+            <label for="name">Second Name</label><p class="input"><input name="secondName"  ></p>
+            <label for="password">Email</label><p class="input"><input type="email" name="email"   ></p> <!-- pattern="[^А-Яа-я]+$"  - маска ввода пароля -->
+            <label for="re-password">Phone Number</label><p class="input"><input type="tel" name="phoneNumber" id="re-password" ></p> <!-- pattern="[^А-Яа-я]+$"  - маска ввода пароля -->
+            <label for="name">Your salary</label><p class="input"><input name="salary"  ></p>
+            <label for="name">Are you perfomer?</label><p class="input"><input type="checkbox" name="executer"  ></p>
 
-foreach ($variables as $item)
-{
-    foreach ($item as $cum) {
-        print_r($cum);
-        echo "  ";
-    }
-    echo "</br>";
-}
+        </fieldset>
+    </fieldset>
+    <button  type="submit" class="btn btn-success"  >Registration</button>
+</form>
