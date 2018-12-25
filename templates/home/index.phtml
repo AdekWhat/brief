@@ -1,14 +1,26 @@
 
+<h2></h2>
+<h3>
 
+<p>
 
+<?php
+//print_r($variables);
+echo "<table border='1' cellspacing='2241'  cellpadding='22' width='100%'> ";
+echo "<td>Название публикация</td><td>Краткое название</td> <td>Тип публикации</td> <td>Кол-во страниц</td> 
+<td>Тираж</td>";
+for($i=0;$i<10;$i++){
+  echo "<tr>";
+for ($j=2; $j <7; $j++) {
+echo"<td>";
+   echo($variables[$i][$j]);
 
-
-<div class="row">
-<!--   --><?php
-//   for ($i=0;$i<=2;$i++){
-//       $this->findLink();
-//       require (__DIR__.'\columm.phtml');
-//   }
-//   ?>
-<h1>   </h1>
-<hr>
+   echo "     ";
+  echo"</td>";
+}
+//echo "</br>";
+echo "</tr>";
+}
+echo "</table>";
+ ?>
+</h3></p>

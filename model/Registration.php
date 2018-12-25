@@ -40,5 +40,15 @@ class Registration
         return false;
     }
 
+    public static function  getUserID()
+    {
+        $nickname = $_SESSION["username"];
+        $db = new Connection();
+        $query = $db->someMethod("SELECT id FROM users WHERE username='$nickname'");
+        return $query->fetch_assoc();
+
+    }
+
+
 
 }

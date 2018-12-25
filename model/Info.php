@@ -12,22 +12,14 @@ use core\Connection;
 
 class Info extends Connection
 {
-    public function addUsersInfo($nick, $name, $secondName, $email)
+    public function addCardsInfo($name_publication, $short_name, $typeOfPublication, $size_page, $circulation,
+     $way_of_printing, $authorId)
     {
-
-
-        if ($nick == null || $name == null || $secondName == null || $email == null || $tel == null) {
-
-            return false;
-        } else {
-
-            $this->someMethod(
-                " INSERT INTO users
-              (nickname, `name`, secondName, email, tel)
-            VALUES ('$nick','$name','$secondName','$email', '$tel')  ");
-
-            return true;
-        }
+          return $this->someMethod(
+              " INSERT INTO card_of_publication
+            (author_id, name_publication, short_name, type_publication, size_page, circulation, way_of_printing)
+          VALUES ('$authorId','$name_publication','$short_name','$typeOfPublication','$size_page', '$circulation',
+           '$way_of_printing')  ");
     }
 
 
@@ -99,6 +91,7 @@ class Info extends Connection
         return $temp->fetch_all();
     }
 
+
     public function getFormatAllInfo()
     {
         $temp = $this->someMethod("SELECT * FROM format");
@@ -125,6 +118,13 @@ class Info extends Connection
     {
         $temp = $this->someMethod("SELECT * FROM steps");
         return $temp->fetch_all();
+    }
+
+    public function getMaxIdPublication()
+    {
+        $temp = $this->someMethod("SELECT MAX(id_card) AS id_card FROM card_of_publication" );
+
+       return $temp->fetch_assoc();
     }
 
 
@@ -187,14 +187,19 @@ class Info extends Connection
 
     public function updateUsersInfo($second_name, $email, $Salary, $performer, $phoneNumber, $username)
     {
-
-
         return  $this->someMethod(
           "UPDATE users SET
                last_name = '$second_name' , adress = '$email', salary = '$Salary', tel='$phoneNumber', performer = '$performer'
                 WHERE username = '$username'");
-
-
+    }
+    public function updateCardsInfo($name_publication, $short_name, $type_of_publication, $size_page, $circulation,
+     $way_of_printing, $author_id)
+    {
+        return  $this->someMethod(
+          "UPDATE card_of_publication SET
+               name_publication = '$name_publication', short_name = '$short_name', type_of_publication = '$type_of_publication',
+               size_page='$size_page', circulation = '$circulation' way_of_printing = '$way_of_printing'
+              WHERE author_id = '$author_id' ");
     }
 
 

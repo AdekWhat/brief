@@ -21,15 +21,15 @@ class AdminController extends controller
     {
 
         if (autorization::validate($_POST["Nickname"], $_POST["Password"]) === true) {
-            $this->setUser($_POST["Nickname"]);
-            $this->title = $this->user;
+//            $this->setUser($_POST["Nickname"]);
+//            $this->title = $this->user;
             $view = new View();
-            $controller = new userController($view);
+//            $controller = new userController($view);
             $info = new info();
 //           $some = $info->getPersonalInfo();
 //            print_r($some);
 
-            $view->setController($controller);
+//            $view->setController($controller);
          $this->view->render("admin/index");
 
         } else {

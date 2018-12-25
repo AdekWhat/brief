@@ -1,0 +1,26 @@
+<form action="http://brief/Publication/SendPublication" class="center-block" method="post" >
+    <fieldset class="form-control-static center-block">
+        <fieldset class="center-block">
+            <label for="name">Name publication</label><p class="input"><input name="name_publication"  ></p>
+            <label for="password">Short name</label><p class="input"><input name="short_name"></p> <!-- pattern="[^А-Яа-я]+$"  - маска ввода пароля -->
+<!--            //книжки, журнали, брошури, газети, буклети,  листівки-->
+            <label for="type_of_publication" >Type of publication </label><p>
+                <select name="typePublication">Type publication
+
+                <option>Книга</option>
+                <option>Газета</option>
+                <option>Брошура</option>
+                <option>Буклет</option>
+                <option>Листівка</option>
+                <option>Інше</option>
+
+                </select >
+            </p>
+            <label for="re-password">Size page</label><p class="input"><input name="size_page"></p> <!-- pattern="[^А-Яа-я]+$"  - маска ввода пароля -->
+            <label for="name">Circulation</label><p class="input"><input name="circulation"  ></p>
+            <label for="name">Way of printing</label><p class="input"><input name="way_of_printing"  ></p>
+        </fieldset>
+    </fieldset>
+    <button  type="submit" class="btn btn-success">Card publication</button>
+</form>
+<?php

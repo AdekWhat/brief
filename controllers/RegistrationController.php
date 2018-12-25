@@ -57,23 +57,6 @@ class RegistrationController extends controller
 
 
 
-    public function actionSecondStep()
-    {
-        $executer = $this->checkExecuter();
-        $this->title = 'Secondstep';
-        $this->view->render('secondstepregistration/index');
-        if ($this->checkSecondReg())
-        {
-
-//
-
-
-        }else{
-            return false;
-        }
-
-
-    }
 
 //    public function actionSubmit()
 //    {
